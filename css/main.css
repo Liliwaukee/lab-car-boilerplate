@@ -1,1 +1,49 @@
-/* Los estilos de tu proyecto */
+.form {
+  background: url("../assets/images/taxi.jpg") bottom;
+  background-size: cover;
+  height: 110vh;
+}
+
+.form-content {
+  height: 50%;
+}
+
+.background-yellow {
+  background-color: #F5B532;
+  color: white;
+}
+
+.drive {
+  background: url("../assets/images/conduce.jpg") center;
+  background-size: cover;
+  height: 55vh;
+}
+
+footer {
+  background-color: #2B2B2B;
+  color: white;
+}
+
+
+.list-group-item {
+  background: none;
+  border: none;
+  color: white;
+
+}
+
+.nav-menu {
+  justify-content:flex-start;
+}
+
+.p-1 {
+  padding: 1em !important;
+}
+
+.p-2 {
+  padding: 2em !important;
+}
+
+.p-3 {
+  padding: 3em !important;
+}
