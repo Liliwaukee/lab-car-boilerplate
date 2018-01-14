@@ -102,6 +102,11 @@ logInModalCenter .fa {
   height: 40vh;
 }
 
+.sectionForm button {
+  background-color: white;
+  margin-top: 5vh;
+}
+
 .form-mobile {
   font-size: 2.2em;
 }
@@ -115,6 +120,32 @@ logInModalCenter .fa {
 .form-button {
   margin-top: 8vh;
 }
+
+.sectionForm hr {
+  border: 2 solid white;
+  border-top-width: 1px;
+  height: 0;
+  margin: 25px auto;
+  clear: both;
+  display: block;
+  width: 400px;
+  position: relative;
+}
+
+
+.sectionForm hr:after {
+  background-color: #F5B532;
+  content:"O bien";
+  display:block;
+  position:absolute;
+  left:50%;
+  height:20px;
+  width:70px;
+  margin:-10px 0 0 -25px;
+  overflow:hidden;
+}
+
+
 /*----SECTION DOWNLOAD ----*/
 .section-download {
   font-size: 1.2em;
@@ -203,6 +234,13 @@ footer {
   border-top: 1px solid white;
   margin-top: 5vh;
 }
+
+.footer-logo {
+  padding-top: 10vh;
+}
+
+
+
 
 .p-05 {
   padding: 0.5em !important;
