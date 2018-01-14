@@ -1,3 +1,26 @@
+#nav {
+  height: 10vh;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu {
+  justify-content:flex-start;
+}
+
+#section-map input {
+  background: none;
+  border: 1px solid white;
+  border-radius: 8px;
+
+}
+
+#section-map ::placeholder {
+  color: white;
+  font-size: 2vh;
+}
+
+
 .form {
   background: url("../assets/images/taxi.jpg") bottom;
   background-size: cover;
@@ -19,11 +42,34 @@
   height: 55vh;
 }
 
+.drive-content {
+  background-color: rgba(10, 10, 10, 0.5);
+  color: white;
+  height: 100%;
+}
+
+#section-map {
+  height: 50vh;
+}
+
+.section-map-map {
+  width: 80vh;
+}
+
+#map {
+  height: 80%;
+  margin: 0;
+  padding: 0;
+}
+/*
+.row {
+  padding: 0!important;
+}
+*/
 footer {
   background-color: #2B2B2B;
   color: white;
 }
-
 
 .list-group-item {
   background: none;
@@ -32,12 +78,14 @@ footer {
 
 }
 
-.nav-menu {
-  justify-content:flex-start;
-}
+
 
 .p-1 {
   padding: 1em !important;
+}
+
+.p-1-left {
+  padding: 1em 1em 1em 0;
 }
 
 .p-2 {
