@@ -26,17 +26,10 @@ hr {
 }
 
 
-logInModalCenter .fa {
-  border: 1px solid #F5B532;
-  color: white;
-  padding: 1em;
-}
-
 /*-----NAV----*/
 #nav {
   height: 15vh;
   margin: 0;
-  padding: 0 5%;
 }
 
 #nav img {
@@ -47,10 +40,13 @@ logInModalCenter .fa {
   padding-left: 3em;
 }
 
+#nav ul {
+  margin-top: -2em;
+}
+
 /*-----NAV MODAL----*/
 
-
-.modal-content{
+.modal-content {
   background-color: black;
   color: #bd8500;
 }
@@ -74,9 +70,30 @@ logInModalCenter .fa {
   background-color:
 }
 
-#logInModalCenter input {
-  background: none;
+#logInModalCenter input, #signUpModalCenter input {
+  background: rgba(245, 181, 50, 0.2);
+  border: 1px solid rgba(245, 181, 50, 0.6);
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8em;
+}
+
+#signUpModalCenter ::placeholder{
+  color: white;
+  font-size: 0.7em;
+  opacity: 0.7;
+  padding-left: 0.7em;
+}
+
+.dropdown-toggle {
+  background-color: rgba(240, 240, 240, 0.8);
+  color: #404040;
+}
+
+#logInModalCenter .fa {
   border: 1px solid #F5B532;
+  color: white;
+  padding: 1em;
 }
 
 .btn-loging {
@@ -122,29 +139,36 @@ logInModalCenter .fa {
 }
 
 .sectionForm hr {
-  border: 2 solid white;
-  border-top-width: 1px;
-  height: 0;
-  margin: 25px auto;
-  clear: both;
-  display: block;
-  width: 400px;
-  position: relative;
+  background-color: white;
+  display: inline-block;
+  line-height: 30%;
+  width: 80%;
 }
 
-
-.sectionForm hr:after {
+.sectionForm hr:before {
   background-color: #F5B532;
   content:"O bien";
-  display:block;
-  position:absolute;
-  left:50%;
-  height:20px;
-  width:70px;
-  margin:-10px 0 0 -25px;
-  overflow:hidden;
+  display: inline;
+  padding: 8px;
 }
 
+/*----SECTION signUpModalCenter ----*/
+.account {
+  background-color: #F5B532;
+  color: white;
+  border-radius: 5px;
+}
+
+
+/*----SECTION driveModalCenter ----*/
+#driveModalCenter .close {
+  color: white;
+}
+
+#driveModalCenter .modal-body span, #driveModalCenter .modal-body p {
+  font-size: 0.8em;
+  padding-top: 5vh;
+}
 
 /*----SECTION DOWNLOAD ----*/
 .section-download {
@@ -171,12 +195,11 @@ logInModalCenter .fa {
   color: white;
 }
 
-/*----SECTION */
+/*----SECTION MAP - RATES*/
 
 #section-map {
   height: auto;
 }
-
 
 #section-map input {
   background: none;
@@ -200,27 +223,11 @@ logInModalCenter .fa {
 }
 
 
-.background-yellow {
-  background-color: #F5B532;
-  color: white;
-}
-
-
-
-
-
-
-/*
-.row {
-  padding: 0!important;
-}
-*/
+/*----SECTION FOOTER ----*/
 footer {
   background-color: #2B2B2B;
   color: white;
 }
-
-
 
 .list-group-item {
   background: none;
@@ -241,6 +248,11 @@ footer {
 
 
 
+
+.background-yellow {
+  background-color: #F5B532;
+  color: white;
+}
 
 .p-05 {
   padding: 0.5em !important;
