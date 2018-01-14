@@ -1,42 +1,129 @@
-#nav {
-  height: 10vh;
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: gray;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+h6 {
   margin: 0;
   padding: 0;
 }
 
-.nav-menu {
-  justify-content:flex-start;
-}
-
-#section-map input {
-  background: none;
+hr {
+  display: block;
   border: 1px solid white;
-  border-radius: 8px;
-
 }
 
-#section-map ::placeholder {
+
+logInModalCenter .fa {
+  border: 1px solid #F5B532;
   color: white;
-  font-size: 2vh;
+  padding: 1em;
+}
+
+/*-----NAV----*/
+#nav {
+  height: 15vh;
+  margin: 0;
+  padding: 0 5%;
+}
+
+#nav img {
+  width: 90%;
+}
+
+#nav li {
+  padding-left: 3em;
+}
+
+/*-----NAV MODAL----*/
+
+
+.modal-content{
+  background-color: black;
+  color: #bd8500;
 }
 
 
-.form {
+ .modal-header-img {
+  background: url("../assets/images/profile.jpg") center;
+  background-size: cover;
+  border-radius: 100%;
+  border: 5px solid #F5B532;
+  display: block;
+  height: 20vh;
+  width: 20vh;
+}
+
+.modal-footer {
+  background-color: #F5B532;
+}
+
+.modal-footer button {
+  background-color:
+}
+
+#logInModalCenter input {
+  background: none;
+  border: 1px solid #F5B532;
+}
+
+.btn-loging {
+  background-color: rgba(240, 244, 244, 0.9);
+}
+
+.btn-close {
+  color: white;
+}
+
+/*----SECTION FORM ----*/
+.sectionForm {
   background: url("../assets/images/taxi.jpg") bottom;
   background-size: cover;
   height: 110vh;
 }
 
-.form-content {
-  height: 50%;
+.sectionForm-content {
+  height: 55%;
 }
 
-.background-yellow {
-  background-color: #F5B532;
-  color: white;
+.sectionForm-mobileContent {
+  height: 40vh;
 }
 
-.drive {
+.form-mobile {
+  font-size: 2.2em;
+}
+
+.form-logo {
+  height: 3vh;
+  margin-top: -2vh;
+  padding-left: 2%;
+}
+
+.form-button {
+  margin-top: 8vh;
+}
+/*----SECTION DOWNLOAD ----*/
+.section-download {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+/*----SECTION DOWNLOAD ----*/
+
+.section-drive {
   background: url("../assets/images/conduce.jpg") center;
   background-size: cover;
   height: 55vh;
@@ -48,19 +135,50 @@
   height: 100%;
 }
 
+.drive-content button {
+  background-color: #F5B532;
+  color: white;
+}
+
+/*----SECTION */
+
 #section-map {
-  height: 50vh;
+  height: auto;
 }
 
-.section-map-map {
-  width: 80vh;
+
+#section-map input {
+  background: none;
+  border: 1px solid white;
+  border-radius: 8px;
 }
 
-#map {
-  height: 80%;
+#section-map ::placeholder {
+  color: white;
+  font-size: 2vh;
+}
+
+#section-map span {
+  padding-right: 2em;
+}
+
+.map {
+  height: 70vh;
   margin: 0;
-  padding: 0;
+  width: 90%;
 }
+
+
+.background-yellow {
+  background-color: #F5B532;
+  color: white;
+}
+
+
+
+
+
+
 /*
 .row {
   padding: 0!important;
@@ -71,27 +189,57 @@ footer {
   color: white;
 }
 
+
+
 .list-group-item {
   background: none;
   border: none;
   color: white;
-
+  font-size: 0.8em;
+  line-height: 0.9em;
 }
 
+.footer {
+  border-top: 1px solid white;
+  margin-top: 5vh;
+}
 
+.p-05 {
+  padding: 0.5em !important;
+}
 
 .p-1 {
   padding: 1em !important;
 }
 
-.p-1-left {
-  padding: 1em 1em 1em 0;
+.p-1-left !important{
+  padding: 2em 1em 1em 0;
 }
 
 .p-2 {
   padding: 2em !important;
 }
 
+.p-3-left{
+  padding: 2.5em 2.5em 2.5em 0 !important;
+}
+
 .p-3 {
-  padding: 3em !important;
+  padding: 3em!important;
+}
+
+.m-2 {
+  margin: 2em;
+}
+
+.p-only-left {
+  padding: 0 0 0 1em !important;
+}
+
+.p-rates {
+  padding: 2.5em 3.2em 2.5em 3.2em !important;
+}
+
+.p-footer {
+  padding:  6em !important;
 }

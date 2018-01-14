@@ -5,54 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>LabCar</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
-  <div class="container-fluid">
+
+<div class="container-fluid">
 
 <!--NAV-->
 
-  <nav id="nav" class="">
-    <a class="" href="#"><img src="assets/images/logoForma.png"  class="align-left" alt=""></a>
-    <div class="nav-section text-right">
-      <a href="#"><span>Viaja</span></a>
-      <a href="#"><span>Conduce</span></a>
-      <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span>Iniciar Sesión</span></a>
-    </div>
+  <nav class="navbar justify-content-between d-none d-sm-none d-md-block d-lg-block" id="nav">
+    <a class="navbar-brand"><img src="assets/images/logoForma.png"></a>
+
+    <ul class="list-inline">
+      <li class="list-inline-item "><a href="#">Viaja</a></li>
+      <li class="list-inline-item"><a href="#">Conduce</a></li>
+      <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#logInModalCenter">Inicia sesión</a></li>
+    </ul>
   </nav>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+  <!-- NAV Modal -->
+
+  <div class="modal fade" id="logInModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <img src="assets/images/people.svg" alt="">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <div class="modal-header-img">
+          </div>
+            <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <form action="">
-            <input-group>
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <input type="text" name="" value="" placeholder="Userame">
-              <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-              <input type="text" name="" value="" placeholder="Password">
-            </input-group>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Loging</button>
-          <p>Forgot password? <a href="#">Click Here</a></p>
-        </div>
+          <div class="container-fluid col-md-7">
+            <form>
+              <div class="input-group mb-3">
+                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-addon"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+              </div>
+              <button type="button" class="btn mb-3 btn-loging" data-dismiss="modal">Loging</button>
+            </form>
+           </div>
+           <p class="text-center">Forgot password? <a href="#">Click Here</a></p>
+          </div>
       </div>
     </div>
   </div>
 
-<!--
-    <nav class="navbar bg-light navbar-light nav-menu">
+    <nav class="navbar bg-light navbar-light nav-menu d-block d-sm-block d-md-none d-lg-none">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -71,7 +78,6 @@
 
       </div>
     </div>
--->
 
 
 
@@ -80,18 +86,22 @@
 
 <!--FORM-->
 
-  <div class="row">
-    <div class="col-sm-12 form d-flex justify-content-end d-flex align-items-center">
-    <div class="col-sm-8 col-md-5 form-content background-yellow">
-      <h4>Disfruta del viaje</h4>
-      <h4>Eres el dueño de tu tiempo</h4>
-      <h6>Viaja con</h6>
-      <img src="assets/images/logoBlanco.png" alt="">
-      <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#signUpModalCenter">REGÍSTRATE</button>
-      <p class="text-center">O bien</p>
-      <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#driveModalCenter">Conviétete en conductor</button>
+  <div class="row sectionForm d-flex align-items-center d-flex justify-content-end">
+    <div class="col-md-5 d-none d-sm-none d-md-block sectionForm-content background-yellow p-2">
+      <h3>Disfruta del viaje</h3>
+      <h3>Eres el dueño de tu tiempo</h3>
+      <h6 class="d-inline travel">Viaja con</h6>
+      <span><img src="assets/images/logoBlanco.png" alt="" class="d-inline"></span>
+      <button type="button" class="btn btn-sm d-block" data-toggle="modal" data-target="#signUpModalCenter">REGÍSTRATE</button>
+      <p class="line">O bien</p>
+      <button type="button" class="btn btn-sm d-block" data-toggle="modal" data-target="#driveModalCenter">Conviétete en conductor</button>
     </div>
+    <div class="col-xs-7 col-sm-10 d-block d-none d-sm-block d-md-none  sectionForm-mobileContent background-yellow p-2">
+      <h6 class="form-mobile d-inline">Comienza a viajar <br>con</h6>
+      <img src="assets/images/logoBlanco.png" alt="" class="form-logo d-inline">
+      <button type="button" name="button" class="btn d-block form-button font-weight-bold">Descarga el app</button>
     </div>
+
   </div>
 
 
@@ -201,32 +211,40 @@
   </div>
 
 
-<!--DOWNLOAD-->
+<!--SECTION DOWNLOAD-->
 
-  <div class="row col-sm-12 download background-yellow p-2">
-    <div class="row col-md-10 justify-content-center border border-white border-left-0 p-1-left">
-      <div class="col-md-6">
-        <img src="assets/images/iPhone6Plus.png" alt="" class="img-fluid">
-      </div>
-      <div class="col-md-6  d-none d-sm-none d-md-block">
-
-        <h4>Descarga la nueva app</h4>
-        <p>La versión actualizada de LabCar esta llena de nuevas funciones para llegar a donde quieras aún más fácil y rápido.</p>
-        <p>Con sólo tocar un botón, un auto llega justo a tu ubicación. Súbete y no te preocupes: tu conductor sabe exactamente a dónde ir.</p>
-      </div>
-      <div class="d-block d-none d-sm-block d-md-none">
-        <p>Llega a tu destino aún más rápido</p>
+  <div class="row section-download background-yellow p-3-left">
+    <div class="col-md-10">
+      <div class="row p-2 border border-white border-left-0 p-1-left">
+        <div class="col-md-6 d-flex justify-content-center d-none d-sm-none d-md-block d-lg-block ">
+          <img src="assets/images/iPhone6Plus.png" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-5 d-none d-sm-none d-md-block d-lg-block ">
+          <h3 class="">Descarga la nueva app</h3>
+          <p class="">La versión actualizada de LabCar esta llena de nuevas funciones para llegar a donde quieras aún más fácil y rápido.</p>
+          <p class="">Con sólo tocar un botón, un auto llega justo a tu ubicación. Súbete y no te preocupes: tu conductor sabe exactamente a dónde ir.</p>
+        </div>
       </div>
     </div>
-  </div>
+
+
+      <div class=" d-block d-sm-block d-md-none d-lg-none p-only-left">
+        <img src="assets/images/iPhone6Plus.png" alt="" class="img-fluid">
+
+<p>Llega a tu destino aún más rápido</p>
+      </div>
+
+    </div>
+
+</div>
 
 
 <!--DRIVE-->
-  <div class="row col-md-12 drive justify-content-end">
+  <div class="row section-drive justify-content-end">
     <div class="col-md-4 drive-content d-flex align-content-center flex-wrap">
       <h4>Conduce cuando quieras</h4>
-      <p>LabCar es una opción flexible para alcanzar tus metas financieras.</p>
-      <button type="button" class="btn btn-sm">Conviétete en conductor</button>
+      <p class="d-block">LabCar es una opción flexible para alcanzar tus metas financieras.</p>
+      <button type="button" class="d-block btn btn-sm ">Conviétete en conductor</button>
     </div>
   </div>
 
@@ -234,23 +252,31 @@
 
 <!--MAP-->
 
-  <div class="row col-md-12 background-yellow" id="section-map">
-
-    <div class="col-md-6">
+  <div class="row background-yellow p-rates" id="section-map">
+    <div class="col-md-6 p-rates">
       <h4>Tarifas</h4>
-      <p>Consulta las tarifas LabCar</p>
-      <form action="">
-        <img src="assets/images/shape.png" alt="">
-        <input type="text" name="departure" value="" placeholder="Ingrese su punto de partida">
-        <img src="assets/images/shape2.png" alt="">
-        <input type="text" name="arrived" value="" placeholder="Ingrese su destino">
-        <button type="submit" class="btn btn-sm">Trazar tu ruta</button>
-      </form>
+      <p class="mb-4">Consulta las tarifas LabCar aquí</p>
+      <div class="row">
+        <div class="col-md-8">
+          <form action="">
+            <div class="input-group mb-4">
+              <span><img src="assets/images/shape.png" alt=""></span>
+              <input type="text" class="form-control" placeholder="Ingrese su punto de partida" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-4">
+              <span><img src="assets/images/shape2.png" alt=""></span>
+              <input type="text" class="form-control" placeholder="Ingrese su destino" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <button type="submit" class="btn btn-sm mx-auto d-block">¡TRAZAR RUTA!</button>
+          </form>
+        </div>
+      </div>
     </div>
-
     <div class="col-md-5">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30823518.103863068!2d-99.1501876691871!3d19.428106152332774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1515686884649"  frameborder="1" style="border:0" allowfullscreen id="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30823518.103863068!2d-99.1501876691871!3d19.428106152332774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1515686884649"  frameborder="1" style="border:0" allowfullscreen class="border p-05 img-fluid d-none d-sm-none d-md-block d-lg-block map">
       </iframe>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30102.545801375407!2d-99.18061136240364!3d19.420258386891366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff3758f76ae9%3A0x2ac93d820175a843!2sCapital+Coworking!5e0!3m2!1ses-419!2smx!4v1515924223253" frameborder="0" style="border:0" allowfullscreen class="border p-05 img-fluid d-block d-sm-block d-md-none d-lg-none map mx-auto"></iframe>
     </div>
 
   </div>
@@ -258,47 +284,53 @@
 
 <!--FOOTER-->
 
-  <footer class="row col-md-12">
-    <div class="col-md-3">
-      <img src="assets/images/logoBlanco.png" alt="">
+  <footer class="row">
+    <div class="col-md-10 offset-md-1 p-1-left">
+      <img src="assets/images/logoBlanco.png" alt="" class="p-1-left">
+      <hr>
     </div>
-
-    <div class="col-md-3 col-sm-6 col-6">
-      <ul class="list-group">
-        <li class="list-group-item">Viaja</li>
-        <li class="list-group-item">Conduce</li>
-        <li class="list-group-item">Países</li>
-        <li class="list-group-item">Ciudades</li>
-        <li class="list-group-item">Entregas</li>
-        <li class="list-group-item">Cómo funciona</li>
-        <li class="list-group-item">Países</li>
-        <li class="list-group-item">Seguridad</li>
-      </ul>
+    <div class="col-md-2 offset-md-2 d-flex align-items-end">
+        <i class="fa fa-facebook  " aria-hidden="true"></i>
+        <i class="fa fa-twitter p-only-left" aria-hidden="true"></i>
+        <i class="fa fa-linkedin p-only-left" aria-hidden="true"></i>
+        <i class="fa fa-apple p-only-left" aria-hidden="true"></i>
+        <i class="fa fa-play p-only-left" aria-hidden="true"></i>
+      </div>
+    <div class="col-md-2 col-sm-6 col-6">
+        <ul class="list-group">
+          <li class="list-group-item">Viaja</li>
+          <li class="list-group-item">Conduce</li>
+          <li class="list-group-item">Países</li>
+          <li class="list-group-item">Ciudades</li>
+          <li class="list-group-item">Entregas</li>
+          <li class="list-group-item">Cómo funciona</li>
+          <li class="list-group-item">Países</li>
+          <li class="list-group-item">Seguridad</li>
+        </ul>
+      </div>
+    <div class="col-md-2 d-none d-sm-none d-md-block">
+        <ul class="list-group">
+          <li class="list-group-item">Oportunidades</li>
+          <li class="list-group-item">Nuestra historia</li>
+          <li class="list-group-item">API de LabCar</li>
+          <li class="list-group-item">Eventos</li>
+          <li class="list-group-item">Desarrolladores</li>
+          <li class="list-group-item">Servicios</li>
+          <li class="list-group-item">Laboratoria</li>
+          <li class="list-group-item">Coders</li>
+        </ul>
+      </div>
+    <div class="col-md-2 col-sm-6 col-6 d-flex align-items-end">
+        <ul class="list-group">
+          <li class="list-group-item"><img src="assets/images/appstore.png" alt="" class="img-fluid"></li>
+          <li class="list-group-item"><img src="assets/images/enBadgeWebGeneric.png" alt="" class="img-fluid"></li>
+        </ul>
+      </div>
+    <div class="row p-2">
+      <div class="col-md-12 offset-md-4 footer">
+        <p class="d-block">@2017 LabCar Tecnologies Inc.</p>
+      </div>
     </div>
-
-    <div class="col-md-3 d-none d-sm-none d-md-block">
-      <ul class="list-group">
-        <li class="list-group-item">Oportunidades</li>
-        <li class="list-group-item">Nuestra historia</li>
-        <li class="list-group-item">API de LabCar</li>
-        <li class="list-group-item">Eventos</li>
-        <li class="list-group-item">Desarrolladores</li>
-        <li class="list-group-item">Servicios</li>
-        <li class="list-group-item">Laboratoria</li>
-        <li class="list-group-item">Coders</li>
-      </ul>
-    </div>
-
-    <div class="col-md-3 col-sm-6 col-6">
-      <ul class="list-group">
-        <li class="list-group-item"><img src="assets/images/appstore.png" alt="" class="img-fluid"></li>
-        <li class="list-group-item"><img src="assets/images/enBadgeWebGeneric.png" alt="" class="img-fluid"></li>
-      </ul>
-    </div>
-
-    <p>@2017 LabCar Tecnologies Inc.</p>
-
-
   </footer>
 
 
