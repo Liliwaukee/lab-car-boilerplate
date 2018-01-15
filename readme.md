@@ -4,4 +4,4 @@
 
 ###Para desarrollar el sitio se utilizó el framework Bootstrap.
 
-[Web Site](assets/images/labCar.jpg)
+![Web Site](assets/images/labCar.jpg)
